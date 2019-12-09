@@ -1,0 +1,34 @@
+<h1>Edit Author</h1>
+
+{{author.name}}
+{{author.bio}}
+{{author.gender}}
+
+<form method="post" action="/authors/?_method=PUT">
+    <div>
+        <label>Name</label>
+    </div>
+    <div>
+        <input type="text" name="name" value="" />
+    </div>
+    <div>
+        <label>Bio</label>
+    </div>
+    <div>
+        <textarea name="bio"></textarea>
+    </div>
+    <div>
+        <label>Gender</label>
+    </div>
+    <div>
+        <select name="gender">
+            <option value="" hidden selected></option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="non binary">non binary</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Submit Form" />
+    </div>
+</form>
