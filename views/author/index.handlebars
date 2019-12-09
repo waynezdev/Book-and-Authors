@@ -1,0 +1,19 @@
+<h1>Authors</h1>
+
+<a href="/authors/new">Create New Author</a>
+
+{{!-- The 'this' in this context refers to the specific author being handled at the time in the loop --}}
+
+
+{{#each authors}}
+<div>
+    <p>Name: {{ this.name }}</p>
+    <p>Bio: {{ this.bio }}</p>
+    <p>Gender: {{ this.gender }}</p>
+</div>
+
+
+
+
+<hr />
+{{/each}}
