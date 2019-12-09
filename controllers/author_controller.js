@@ -38,14 +38,15 @@ async function destroy (req, res) {
 async function edit (req, res) {
   let { id } = req.params // Destructure off the id off req.params
   let author = await AuthorModel.findById(id) // query the DB for the author by ID
-  res.render('authors/edit', { author }) // Pass that author through to 'author/edit'
+  res.render('author/edit', { author }) // Pass that author through to 'authors/edit'
 }
 
 // The logic for updating by ID
 async function update (req, res) {
   let { name, bio, gender } = req.body // Destructure name, bio and gender off req.body
+  console.log(req.params)
   let { id } = req.params // Destructure off the id off req.params
-  await AuthorModel.findByIdUpdate(id, { name, bio, gender }) // Update the author. Find by the id and then update with the new name, bio and gender
+  await AuthorModel.findByIdAndUpdate(id, { name, bio, gender }) // Update the author. Find by the id and then update with the new name, bio and gender
   res.redirect(`/authors/${id}`) // Redirect to the show page for author we just updated
 }
 

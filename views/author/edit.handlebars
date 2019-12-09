@@ -1,15 +1,12 @@
 <h1>Edit Author</h1>
 
-{{author.name}}
-{{author.bio}}
-{{author.gender}}
 
-<form method="post" action="/authors/?_method=PUT">
+<form method="post" action="/authors/{{author.id}}?_method=PUT">
     <div>
         <label>Name</label>
     </div>
     <div>
-        <input type="text" name="name" value="" />
+        <input type="text" name="name" value={{author.name}} />
     </div>
     <div>
         <label>Bio</label>
