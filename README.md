@@ -94,6 +94,7 @@ async function show(req, res) {
 
 
 - The views for the challenge:
+    - Add the link to the author/index.handlebars page `<a href="/authors/{{this._id}}/edit">Edit Author</a>`
     - Create a edit.handlebars in `views/author/edit.handlebars`
     ```
     <h1>New Author</h1>
@@ -151,3 +152,4 @@ async function show(req, res) {
 - Possible errors for this step
     - Forgot the '( )' at the end of `const router = express.Router()`
     - Forgot to export the functions
+    - Having a plural or not having a plural where there should be one
