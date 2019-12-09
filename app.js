@@ -11,8 +11,7 @@ const routes = require('./routes')
 // The options object as the second argument is to address deprication warnings
 
 mongoose.connect('mongodb://localhost/books_r_us', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+  useNewUrlParser: true
 })
 
 mongoose.Promise = global.Promise // Telling mongoose to use the Node Promise library.
