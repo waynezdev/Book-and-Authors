@@ -1,22 +1,22 @@
-<h1>Authors df</h1>
+<h1>Books</h1>
 
-<a href="/authors/new">Create New Author</a>
+<a href="/books/new">Create book</a>
 
 {{!-- The 'this' in this context refers to the specific author being handled at the time in the loop --}}
 
 
-{{#each authors}}
+{{#each books}}
 <div>
     <p>Name: {{ this.name }}</p>
-    <p>Bio: {{ this.bio }}</p>
-    <p>Gender: {{ this.gender }}</p>
+    <p>Summary: {{ this.summary }}</p>
+    <p>Author: {{ this.author }}</p>
 </div>
 
-<a href="/authors/{{this._id}}">View Author</a>
+<a href="/books/{{this._id}}">View Book</a>
 {{!-- notice the "?_method=DELETE" this must be added to use a delete verb --}}
 {{!-- Its a query param which is given 'method=DELETE' --}}
-<a href="/authors/{{this._id}}?_method=DELETE">Delete Author</a>
-<a href="/authors/{{this._id}}/edit">Edit Author</a>
+<a href="/books/{{this._id}}?_method=DELETE">Delete Book</a>
+<a href="/books/{{this._id}}/edit">Edit Book</a>
 {{!-- This horizontal line is frowned upon --}}
 <hr />
 {{/each}}
